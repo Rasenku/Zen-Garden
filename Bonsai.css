@@ -1,0 +1,270 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+body {
+	font-family: 'Montserrat', sans-serif;
+	font-size: 15px;
+	line-height: 20px;
+	color: #FF00FF;
+	background: rgb(2,0,36);
+	background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(121,9,121,1) 30%, rgba(0,212,255,1) 100%);
+	margin: 0;
+	padding: 0;
+	margin-bottom: -20px;
+	}
+
+h1 {
+	font-size: 40px;
+	font : "Montserrat", monospace;
+  align-self : end;
+}
+
+h2 {
+	font-size: 35px;
+	font-weight: 400;
+}
+
+h3 {
+	font-size: 25px;
+	font-weight: 400;
+}
+
+h4 {
+	font-size: 20px;
+	font-weight: 400;
+}
+
+h5 {
+	font-size: 15px;
+	font-weight: 400;
+}
+h6 {
+	font-size: 10px;
+	font-weight: 400;
+}
+
+
+
+@font-face {
+    font-family: 'Montserrat';
+    src: url('fonts/journal-webfont.woff2') format('woff2'),
+         url('fonts/journal-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Montserrat';
+    src: url('fonts/veteran_typewriter-webfont.woff2') format('woff2'),
+         url('fonts/veteran_typewriter-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body {
+  font  : 1.3rem sans-serif;
+  padding : 0.5em;
+  margin  : 0;
+	background: rgb(2,0,36);
+	background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(121,9,121,1) 30%, rgba(0,212,255,1) 100%);
+}
+
+form {
+  position : relative;
+  width  : 740px;
+  height : 498px;
+  margin : 0 auto;
+  padding: 1em;
+  box-sizing: border-box;
+	background: rgb(2,0,36);
+	background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(121,9,121,1) 30%, rgba(0,212,255,1) 100%);
+
+  /* we create our grid */
+  display  : grid;
+  grid-gap : 20px;
+  grid-template-columns : repeat(2, 1fr);
+  grid-template-rows    : 10em 1em 1em 1em;
+}
+
+#message {
+   grid-row: 1 / 5;
+}
+
+#from, #reply {
+   display: flex;
+}
+
+Label {
+  font : .8em "Montserrat", sans-serif;
+}
+
+input, textarea {
+  font    : 1.4em/1.5em "handwriting", sans-serif;
+  border  : none;
+  padding : 0 10px;
+  margin  : 0;
+  width   : 80%;
+	background: rgb(139,5,131);
+  background: linear-gradient(90deg, rgba(139,5,131,1) 0%, rgba(121,9,121,1) 50%, rgba(0,212,255,1) 100%);
+}
+
+
+
+input:focus, textarea:focus {
+  background   : rgba(0,0,0,.1);
+	color:white;
+  border-radius: 5px;
+}
+
+textarea {
+  display : block;
+
+  padding : 5px;
+  margin  : 5px 0 0 -10px;
+  width   : 90%;
+  height  : 90%;
+
+  border-right: 1px solid;
+
+  /* resize  : none; */
+  overflow: auto;
+	transition: 400ms;
+}
+
+
+button {
+  padding      : 5px;
+  font         : bold .6em sans-serif;
+  border       : 2px solid #333;
+  border-radius: 5px;
+  background   : none;
+  cursor       : pointer;
+  transform    : rotate(-1.5deg);
+}
+
+button:after {
+  content      : " >>>";
+}
+
+button:hover,
+button:focus {
+  outline     : none;
+	background: rgb(139,5,131);
+  background: linear-gradient(90deg, rgba(139,5,131,1) 0%, rgba(121,9,121,1) 50%, rgba(0,212,255,1) 100%);
+}
+
+
+.select {
+  position: relative;
+
+  display : inline-block;
+}
+
+select .active,
+.select:focus {
+  outline: none;
+
+  box-shadow: 0 0 3px 1px #227755;
+}
+
+
+.select .optList {
+  position : absolute;
+  top      : 100%;
+  left     : 0;
+}
+
+.select .optList.hidden {
+  max-height: 0;
+  visibility: hidden;
+}
+
+.select {
+  font-size   : 0.625em;
+  font-family : Verdana, Arial, sans-serif;
+
+  box-sizing : border-box;
+
+  padding : .1em 2.5em .2em .5em;
+  width   : 10em; /* 100px */
+
+  border        : .2em solid #000;
+  border-radius : .4em;
+  box-shadow    : 0 .1em .2em rgba(0,0,0,.45);
+
+  background : #F0F0F0;
+  background : linear-gradient(0deg, #E3E3E3, #fcfcfc 50%, #f0f0f0);
+}
+
+.select .value {
+  width    : 100%;
+  overflow : hidden;
+  white-space : nowrap;
+  text-overflow: ellipsis;
+  vertical-align: top;
+}
+
+
+.select:after {
+  content : "▼";
+  position: absolute;
+  z-index : 1;
+  top     : 0;
+  right   : 0;
+
+  box-sizing : border-box;
+
+  height  : 100%;
+  width   : 2em;
+  padding-top : .1em;
+
+  border-left  : .2em solid #000;
+  border-radius: 0 .1em .1em 0;
+
+  background-color : #000;
+  color : #FFF;
+  text-align : center;
+}
+
+
+.select .optList {
+  z-index : 2;
+
+  list-style: none;
+  margin : 0;
+  padding: 0;
+
+  box-sizing : border-box;
+
+  min-width : 100%;
+
+  max-height: 10em; /* 100px */
+  overflow-y: auto;
+  overflow-x: hidden;
+
+  border: .2em solid #000;
+  border-top-width : .1em;
+  border-radius: 0 0 .4em .4em;
+
+  box-shadow: 0 .2em .4em rgba(0,0,0,.4);
+  background: #f0f0f0;
+}
+
+.select .option {
+  padding: .2em .3em; /* 2px 3px */
+}
+
+.select .highlight {
+  background: #000;
+  color: #FFFFFF;
+}
+
+.widget select,
+.no-widget .select {
+  position : absolute;
+  left     : -5000em;
+  height   : 0;
+  overflow : hidden;
+}
+strong {
+	font-weight: bolder;
+}
